@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 
-approved_breeds = ["Mastiff", "Chihuahua", "Corgi", "Shar Pei", "Beagle", "French Bulldog", "Pug", "Pointer"]
-
+APPROVED_BREEDS = [
+    "Mastiff",
+    "Chihuahua",
+    "Corgi",
+    "Shar Pei",
+    "Beagle",
+    "French Bulldog",
+    "Pug",
+    "Pointer"
+]
 class Dog:
     def __init__(self, name="Mutt", breed="Mutt"):
         self.name = name
@@ -24,7 +32,7 @@ class Dog:
 
     @breed.setter
     def breed(self, value):
-        if value in approved_breeds or value == "Mutt":
+        if value in APPROVED_BREEDS or value == "Mutt":
             self._breed = value
         else:
             print("Breed must be in list of approved breeds.")
